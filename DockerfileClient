@@ -1,0 +1,7 @@
+FROM node:16.14.0 
+WORKDIR /app
+#COPY package*.json . 깃을통해 가져오는 클라우드 작업환경에서는 주석처리한코드를 사용. 작업pc에서 할때는 필요없음
+#RUN npm install
+COPY . .
+EXPOSE 3000
+CMD ["npm", "run", "start"]
